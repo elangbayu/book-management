@@ -4,18 +4,9 @@ import org.alterra.data.Books;
 
 import java.util.Scanner;
 
-public class Main {
+import static org.alterra.utils.Menu.showMenu;
 
-    static void menu() {
-        System.out.println("Welcome to book management app");
-        System.out.println("Please choose your menu:");
-        System.out.println("1. Create a new book");
-        System.out.println("2. Get all books");
-        System.out.println("3. Get book by ID");
-        System.out.println("4. Update book");
-        System.out.println("5. Delete book");
-        System.out.println("6. Exit");
-    }
+public class Main {
 
     public static void main(String[] args) {
         Books books = new Books();
@@ -23,7 +14,7 @@ public class Main {
         boolean exit = false;
 
         while (!exit) {
-            menu();
+            showMenu();
             int choice = input.nextInt();
             input.nextLine();
             switch (choice) {
